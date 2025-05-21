@@ -85,7 +85,8 @@ class _ToDoListPageState extends State<ToDoListPage> {
   void _addTask(String title, [DateTime? dueDate, String? category]) {
     if (title.trim().isEmpty) return;
     setState(() {
-      _tasks.add(Task(title: title.trim(), dueDate: dueDate, category: category));
+      _tasks
+          .add(Task(title: title.trim(), dueDate: dueDate, category: category));
     });
   }
 
@@ -103,7 +104,8 @@ class _ToDoListPageState extends State<ToDoListPage> {
 
   void _showEditDialog(int index) {
     final task = _tasks[index];
-    final TextEditingController editController = TextEditingController(text: task.title);
+    final TextEditingController editController =
+        TextEditingController(text: task.title);
     DateTime? selectedDate = task.dueDate;
     String? selectedCategory = task.category;
 
@@ -152,7 +154,8 @@ class _ToDoListPageState extends State<ToDoListPage> {
                   hint: const Text('Select category'),
                   isExpanded: true,
                   items: ['Work', 'Personal', 'Urgent']
-                      .map((cat) => DropdownMenuItem(value: cat, child: Text(cat)))
+                      .map((cat) =>
+                          DropdownMenuItem(value: cat, child: Text(cat)))
                       .toList(),
                   onChanged: (value) {
                     setStateDialog(() {
@@ -237,7 +240,8 @@ class _ToDoListPageState extends State<ToDoListPage> {
                   hint: const Text('Select category'),
                   isExpanded: true,
                   items: ['Work', 'Personal', 'Urgent']
-                      .map((cat) => DropdownMenuItem(value: cat, child: Text(cat)))
+                      .map((cat) =>
+                          DropdownMenuItem(value: cat, child: Text(cat)))
                       .toList(),
                   onChanged: (val) {
                     setStateDialog(() {
@@ -287,7 +291,9 @@ class _ToDoListPageState extends State<ToDoListPage> {
           IconButton(
             icon: Icon(widget.isDarkMode ? Icons.light_mode : Icons.dark_mode),
             onPressed: widget.toggleTheme,
-            tooltip: widget.isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode',
+            tooltip: widget.isDarkMode
+                ? 'Switch to Light Mode'
+                : 'Switch to Dark Mode',
           ),
         ],
       ),
@@ -329,8 +335,8 @@ class _ToDoListPageState extends State<ToDoListPage> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                       elevation: 3,
-                      margin:
-                          const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
+                      margin: const EdgeInsets.symmetric(
+                          vertical: 6, horizontal: 12),
                       child: ListTile(
                         onTap: () => _showEditDialog(index),
                         leading: Checkbox(
@@ -361,7 +367,8 @@ class _ToDoListPageState extends State<ToDoListPage> {
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: 6, vertical: 2),
                                 decoration: BoxDecoration(
-                                  color: _categoryColor(task.category!)?.withOpacity(0.3),
+                                  color: _categoryColor(task.category!)
+                                      ?.withOpacity(0.3),
                                   borderRadius: BorderRadius.circular(6),
                                 ),
                                 child: Text(
