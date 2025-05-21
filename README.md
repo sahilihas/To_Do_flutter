@@ -1,6 +1,32 @@
-# To_do_app
+# 📝 To-Do Flutter App
 
-A new Flutter project.
+A simple yet feature-rich To-Do app built using Flutter. This app allows users to create, edit, and manage tasks with support for due dates, categories, dark mode, and persistent local storage using `shared_preferences`.
+
+---
+
+## ✨ Features
+
+- ✅ Add, edit, and delete tasks
+- 🗂 Categorize tasks (Work, Personal, Urgent)
+- ⏰ Set optional due dates
+- 🌗 Light & Dark theme toggle
+- 💾 Saves data locally using `SharedPreferences`
+- 🎯 Interactive UI with swipe-to-delete and edit on tap
+
+---
+
+## 🛠 Built With
+
+- [Flutter](https://flutter.dev/)
+- [Dart](https://dart.dev/)
+- `shared_preferences` for local data persistence
+- `intl` package for date formatting
+
+---
+
+## 📸 Screenshots
+![dark mode](https://github.com/user-attachments/assets/f005494c-a251-43a2-87e8-77584c07a9ee)
+![light mode](https://github.com/user-attachments/assets/69dcef2f-29fa-4bdb-abca-ff8aa2d9f976)
 
 ## Getting Started
 
